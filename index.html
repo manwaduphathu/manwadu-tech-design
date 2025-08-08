@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manwadu Tech & Design</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+              <img src="assets/logo.png" alt="Manwadu Tech & Design Logo">
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="../manwadu-tech-design/store/shop.php">Shop</a></li>
+                <li><a href="#contact">Contact</a></li>               
+            </ul>
+        </nav>
+    </header>
+
+    <section class="home" id="home">
+        <video autoplay muted loop class="background-video">
+            <source src="assets/homepage.mp4" type="video/mp4"/>
+        </video>
+        <div class="home-content">
+            <h1>Welcome to Manwadu Tech & Design</h1>
+            <p>Your trusted partner in IT support and digital design</p>
+            <a href="#services" class="btn">Explore Our Services</a>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>IT Support</h3>
+                <p>Fix laptops, hardware and software issues, install operating systems, and more.</p>
+            </div>
+            <div class="card">
+                <h3>Networking</h3>
+                <p>Help with network setup, troubleshooting, and connecting printers or devices.</p>
+            </div>
+            <div class="card">
+                <h3>Web Development</h3>
+                <p>Custom websites for businesses, portfolios, and personal brands.</p>
+            </div>
+            <div class="card">
+                <h3>Graphic Design</h3>
+                <p>Professional posters, logos, and promotional designs tailored to your brand.</p>
+            </div>
+            <div class="card">
+                <h3>Tech Store</h3>
+                <p>We sell laptops, phones, hard drives, and other essential tech equipment.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Us</h2>
+        <p>Manwadu Tech & Design is a South African-based IT and creative solutions business founded to solve tech problems and build brands. We combine hands-on IT support with professional web and graphic design services to serve both individuals and businesses.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <p>Need help or want to work with us? Reach out!</p>
+        <div class="contact-info">
+            <p>Email: support@manwadutech.co.za</p>
+            <p>Phone: +27 71 234 5678</p>
+            <p>Location: Gauteng, South Africa</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Manwadu Tech & Design. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const offset = 80; 
+                const topPosition = target.offsetTop - offset;
+
+                window.scrollTo({
+                top: topPosition,
+                behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>

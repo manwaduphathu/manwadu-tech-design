@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../assets/backgroud.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.login-container, .registration-main {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    width: 350px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    color: white;
+}
+
+.login-header, .login-header h2 {
+    text-align: center;
+    color: white;
+}
+
+.logo img {
+    max-width: 80px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    font-weight: bold;
+    color: white;
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.form-options {
+    display: flex;
+    gap: 10px; 
+    align-items: center; 
+}
+
+.btn {
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0056b3, #0099cc);
+}
+
+a {
+    color: #00d4ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p[style*="color:red"] {
+    background: rgba(255, 0, 0, 0.4);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}

@@ -1,0 +1,122 @@
+/* General Page Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+/* Section Styles */
+section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #6a1b9a;
+}
+
+/* Address Cards */
+.address-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #fafafa;
+}
+
+.address-card p {
+    margin: 6px 0;
+}
+
+.address-card a {
+    color: #e53935;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.address-card a:hover {
+    text-decoration: underline;
+}
+
+/* Add Address Form */
+.add-address form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.add-address input,
+.add-address textarea,
+.add-address button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.add-address textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.add-address button {
+    background-color: #6a1b9a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-address button:hover {
+    background-color: #4a0072;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    section {
+        margin: 20px;
+        padding: 15px;
+    }
+
+    .address-card {
+        padding: 10px;
+    }
+
+    .add-address button {
+        padding: 12px;
+    }
+}
