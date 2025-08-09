@@ -272,6 +272,127 @@ footer {
     text-align: center;
     margin-top: 30px;
 }
+/* Cart Action Buttons */
+
+
+button,
+.checkout-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Remove Selected Button */
+button[name="remove_selected"] {
+    background-color: #e74c3c;
+    color: white;
+}
+button[name="remove_selected"]:hover {
+    background-color: #c0392b;
+}
+
+/* Update Quantity Button */
+button[name="update_quantity"] {
+    background-color: #3498db;
+    color: white;
+}
+button[name="update_quantity"]:hover {
+    background-color: #2980b9;
+}
+
+/* Proceed to Checkout Button */
+.checkout-btn {
+    background-color: #27ae60;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+}
+.checkout-btn:hover {
+    background-color: #1e8449;
+}
+
+
+/* check out*/
+/* Checkout Container *//* Checkout Page Container */
+.checkout-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 25px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+.checkout-container header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+.checkout-container h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.checkout-container nav a {
+    font-size: 14px;
+    color: #3498db;
+    text-decoration: none;
+}
+.checkout-container nav a:hover {
+    text-decoration: underline;
+}
+
+/* Delivery Options */
+.delivery-options label {
+    display: block;
+    font-size: 16px;
+    color: #444;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.delivery-options input[type="radio"] {
+    margin-right: 8px;
+}
+.delivery-options label:hover {
+    background: #f9f9f9;
+    border-color: #bbb;
+}
+
+/* Submit Button */
+.delivery-options button {
+    width: 100%;
+    padding: 12px;
+    background: #27ae60;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s;
+}
+.delivery-options button:hover {
+    background: #1e8449;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .checkout-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}
+
 
 
 /* Responsive */
