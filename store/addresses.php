@@ -11,13 +11,13 @@ $user_id = $_SESSION['user_id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_address'])) {
     $full_name = $_POST['full_name'];
-    $phone = $_POST['phone'];
+    $phone = $_POST['phone_number'];
     $address_line = $_POST['address_line'];
     $city = $_POST['city'];
     $province = $_POST['province'];
     $postal_code = $_POST['postal_code'];
 
-    $stmt = $conn->prepare("INSERT INTO addresses (user_id, full_name, phone, address_line, city, province, postal_code, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
+    $stmt = $conn->prepare("INSERT INTO addresses (user_id, full_name, phone_number, address_line, city, province, postal_code, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, NOW())");
     $stmt->bind_param("issssss", $user_id, $full_name, $phone, $address_line, $city, $province, $postal_code);
     $stmt->execute();
 }
@@ -46,7 +46,7 @@ $addresses = $stmt->get_result();
     <header>
         <h1>My Address Book</h1>
         <nav>
-            <a href="account.php">← Back to Account</a>
+            <a href="shop.php">← Back to shop</a>
         </nav>
     </header>
 
@@ -56,7 +56,7 @@ $addresses = $stmt->get_result();
             <?php while ($address = $addresses->fetch_assoc()): ?>
                 <div class="address-card">
                     <p><strong><?= htmlspecialchars($address['full_name']) ?></strong></p>
-                    <p><?= htmlspecialchars($address['phone']) ?></p>
+                    <p><?= htmlspecialchars($address['phone_number']) ?></p>
                     <p><?= nl2br(htmlspecialchars($address['address_line'])) ?></p>
                     <p><?= htmlspecialchars($address['city']) ?>, <?= htmlspecialchars($address['province']) ?>, <?= htmlspecialchars($address['postal_code']) ?></p>
                     <a href="addresses.php?delete=<?= $address['id'] ?>" onclick="return confirm('Are you sure you want to delete this address?')">Delete</a>
@@ -71,7 +71,7 @@ $addresses = $stmt->get_result();
         <h2>Add New Address</h2>
         <form method="POST">
             <input type="text" name="full_name" placeholder="Full Name" required>
-            <input type="text" name="phone" placeholder="Phone Number" required>
+            <input type="text" name="phone_number" placeholder="Phone Number" required>
             <textarea name="address_line" placeholder="Street Address" required></textarea>
             <input type="text" name="city" placeholder="City" required>
             <input type="text" name="province" placeholder="Province" required>

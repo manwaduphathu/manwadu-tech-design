@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once '../includes/db.php'; // DB connection
-require_once '../includes/auth.php'; // Optional: to check if logged in
+//require_once '../includes/auth.php'; 
 
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");

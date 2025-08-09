@@ -9,29 +9,14 @@ if (!isset($_SESSION['user_id'])) {
 
 $user_id = $_SESSION['user_id'];
 $message = "";
-
 // Handle profile update
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_profile'])) {
-    $name = trim($_POST['name']);
+    $name = trim($_POST['full_name']);
     $email = trim($_POST['email']);
     $phone = trim($_POST['phone']);
 
-    // Handle image upload
-    if (!empty($_FILES['profile_picture']['name'])) {
-        $targetDir = "../uploads/";
-        $fileName = basename($_FILES["profile_picture"]["name"]);
-        $targetFile = $targetDir . time() . "_" . $fileName;
-
-        if (move_uploaded_file($_FILES["profile_picture"]["tmp_name"], $targetFile)) {
-            $stmt = $conn->prepare("UPDATE users SET name=?, email=?, phone=?, profile_picture=? WHERE id=?");
-            $stmt->bind_param("ssssi", $name, $email, $phone, $targetFile, $user_id);
-        } else {
-            $message = "Failed to upload image.";
-        }
-    } else {
-        $stmt = $conn->prepare("UPDATE users SET name=?, email=?, phone=? WHERE id=?");
-        $stmt->bind_param("sssi", $name, $email, $phone, $user_id);
-    }
+    $stmt = $conn->prepare("UPDATE users SET full_name=?, email=?, phone=? WHERE id=?");
+    $stmt->bind_param("sssi", $name, $email, $phone, $user_id);
 
     if ($stmt->execute()) {
         $message = "Profile updated successfully!";
@@ -90,24 +75,21 @@ $user = $stmt->get_result()->fetch_assoc();
 
         <!-- Profile Form -->
         <form method="POST" enctype="multipart/form-data">
-            <label>Name:</label>
-            <input type="text" name="name" value="<?= htmlspecialchars($user['name']) ?>" required>
+            <label>Full Name:</label>
+            <input type="text" name="full_name" value="<?= htmlspecialchars($user['full_name']) ?>" required>
 
             <label>Email:</label>
             <input type="email" name="email" value="<?= htmlspecialchars($user['email']) ?>" required>
 
             <label>Phone:</label>
-            <input type="text" name="phone" value="<?= htmlspecialchars($user['phone']) ?>">
-
-            <label>Profile Picture:</label>
-            <input type="file" name="profile_picture">
+            <span style="padding: 8px 12px; background: #eee; border: 1px solid #ccc; border-radius: 4px;">+27</span>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{9}" maxlength="9" value="<?= htmlspecialchars(ltrim($user['phone'] ?? '', '+27')) ?>" placeholder="712345678" required>
 
             <button type="submit" name="update_profile">Update Profile</button>
         </form>
 
         <hr>
 
-        <!-- Password Form -->
         <form method="POST">
             <label>Current Password:</label>
             <input type="password" name="current_password" required>
@@ -120,7 +102,6 @@ $user = $stmt->get_result()->fetch_assoc();
 
         <hr>
 
-        <!-- Delete Account -->
         <form method="POST" onsubmit="return confirm('Are you sure you want to delete your account?');">
             <button type="submit" name="delete_account" style="background:red;color:white;">Delete My Account</button>
         </form>
