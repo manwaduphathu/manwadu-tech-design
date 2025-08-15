@@ -80,6 +80,7 @@ $users = $stmt->fetch_all(MYSQLI_ASSOC);
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="users.php" style="background-color: #34495e;">All Users</a></li>
             <li><a href="add-product.php">Add Product</a></li>
+            <li><a href="orders.php">View Orders</a></li>
             <li><a href="orders.php">Orders</a></li>
             <li><a href="../index.php">Back to Shop</a></li>
         </ul>

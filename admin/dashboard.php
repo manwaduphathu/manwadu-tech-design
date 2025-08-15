@@ -34,9 +34,10 @@ $totalRevenue = $totalRevenueResult->fetch_assoc()['revenue'] ?? 0;
         <aside class="sidebar">
             <h2>Admin Panel</h2>
             <ul>
-                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="dashboard.php" style="background-color: #34495e;">Dashboard</a></li>
                 <li><a href="users.php">View All Users</a></li>
                 <li><a href="add-product.php">Add Product</a></li>
+                <li><a href="products.php">View Products</a></li>
                 <li><a href="orders.php">View Orders</a></li>
                 <li><a href="../includes/logout.php">Logout</a></li>
             </ul>

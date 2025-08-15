@@ -27,7 +27,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
-    background-color: #0a1d3a; /* Optional: matches navy theme */
+    background-color: #0a1d3a;
 }
 
 .logo img {
@@ -59,7 +59,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00aaff; /* Optional hover color */
+    color: #00aaff; 
 }
 
 .nav-links {
@@ -148,10 +148,10 @@ nav ul li a:hover {
 }
 
 .card {
-    background-color: #f9f9f9;
+    background-color: #f9f9f98f;
     padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.233);
     width: 280px;
     transition: transform 0.3s ease;
 }

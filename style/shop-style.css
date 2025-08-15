@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #f4f6fa;
+    background-color: #f4f6fa80;
     color: #333;
     line-height: 1.6;
 }
@@ -64,7 +64,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #00aaff; /* Optional hover color */
+    color: #00aaff; 
 }
 nav ul li.dropdown:hover .dropdown-menu {
     display: block;
@@ -262,7 +262,7 @@ footer {
 /* Total Column Styling */
 .products table td:last-child {
     font-weight: bold;
-    color: #2c7a7b; /* matches shop accent color */
+    color: #2c7a7b; 
 }
 
 /* Empty cart message */
@@ -385,14 +385,6 @@ button[name="update_quantity"]:hover {
     background: #1e8449;
 }
 
-/* Responsive */
-@media (max-width: 480px) {
-    .checkout-container {
-        padding: 20px;
-        margin: 20px;
-    }
-}
-
 
 
 /* Responsive */
@@ -404,5 +396,10 @@ button[name="update_quantity"]:hover {
 
     .search-bar button {
         width: 100%;
+    }
+
+    .checkout-container {
+        padding: 20px;
+        margin: 20px;
     }
 }

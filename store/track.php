@@ -42,10 +42,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <title>Track My Order</title>
     <link rel="stylesheet" href="../style/track-style.css">
+    <link rel="stylesheet" href="../style/addresses-style.css">
+
 </head>
 <body>
+    <header>
+        <h1>Track Your Order</h1>
+        <nav>
+            <a href="shop.php">← Back to shop</a>
+        </nav>
+    </header>
+    
     <div class="track-container">
-        <h2>Track Your Order</h2>
 
         <form method="POST" class="track-form">
             <label for="order_id">Enter Order ID:</label>

@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: #6a1b9a;
+    background-color: #0a1d3a;
     color: white;
     padding: 20px;
     text-align: center;
@@ -42,7 +42,7 @@ section {
 
 h2 {
     margin-top: 0;
-    color: #6a1b9a;
+    color: #00bcd4;
 }
 
 /* Address Cards */
@@ -93,7 +93,7 @@ h2 {
 }
 
 .add-address button {
-    background-color: #6a1b9a;
+    background-color: #0a1a2f;
     color: white;
     border: none;
     cursor: pointer;
@@ -102,7 +102,7 @@ h2 {
 }
 
 .add-address button:hover {
-    background-color: #4a0072;
+    background-color: #00bcd4;
 }
 
 /* Responsive Design */

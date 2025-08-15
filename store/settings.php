@@ -67,10 +67,18 @@ $user = $stmt->get_result()->fetch_assoc();
     <meta charset="UTF-8">
     <title>Settings | Manwadu Tech & Design</title>
     <link rel="stylesheet" href="../style/settings-style.css">
+    <link rel="stylesheet" href="../style/addresses-style.css">
+
 </head>
 <body>
+    <header>
+        <h1>Account Settings</h1>
+        <nav>
+            <a href="shop.php">← Back to shop</a>
+        </nav>
+    </header>
     <div class="settings-container">
-        <h2>Account Settings</h2>
+        
         <p><?= $message ?></p>
 
         <!-- Profile Form -->
